@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 50dvh;
+   background-image: linear-gradient(90deg,#464c61, #252530);
+    color: #f8f8f8;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+#sidebar {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    padding: 7px 14px;
+    background-color: #1f2022;
+    border-right: 2px solid #4f525c;
+
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+#sidebar.close {
+    padding: 5px;
+    width: 60px;
+}
+
+#sidebar ul {
+    list-style: none;
+
+}
+
+#sidebar>ul>li:first-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+
+    .logo {
+        font-weight: 600;
+    }
+}
+
+#sidebar ul li.active a {
+    color: #f8f8f8;
+}
+
+#sidebar .logo {
+    font-family: "Inter", sans-serif;
+}
+
+#sidebar a,
+#sidebar .logo {
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.rotate {
+    rotate: 180deg;
+}
+
+
+#sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#sidebar a img {
+    flex-shrink: 0;
+}
+
+#sidebar a p {
+    flex-grow: 1;
+}
+
+#toggle-btn {
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    svg {
+        transition: rotate 150ms ease;
+    }
+}
+
+#toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+ 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.img img{
+    width: 6%;
+}
+
+main span{
+    margin-bottom: 5%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form button{
+    margin-top: 2.5%;
+    font-family: "Oswald", sans-serif;
+    width: 12.5%;
+    font-size: 15px;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8f8f8;
+    padding: 2%;
+    align-self: center;
+    text-align: center;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5%;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
